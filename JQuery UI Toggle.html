@@ -1,0 +1,39 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI Toggle Example</title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <!-- CSS -->  
+      <style>  
+         .toglr { width: 300px; height: 150px; }  
+         #btn { padding: .5em 1em; text-decoration: none; }  
+         #effect-1 { width: 200px; height: 100px; padding: 0.4em; position: relative; }  
+         #effect-1 h3 { margin: 0; padding: 0.4em; text-align: center; }  
+      </style>  
+      <script>  
+         $(function() {  
+            function runEffect() {  
+               $( "#effect-1" ).toggle('explode', 300);  
+            };  
+            $( "#btn" ).click(function() {  
+               runEffect();  
+               return false;  
+            });  
+         });  
+      </script>  
+   </head>  
+   <body>  
+      <div class="toglr">  
+      <div id="effect-1" class="ui-widget-content ui-corner-all">  
+         <h3 class="ui-widget-header ui-corner-all">Hello World!!</h3>  
+         <p>  
+Click the button to explode me......  
+         </p>  
+      </div>  
+      </div>  
+      <a href="#" id="btn" class="ui-state-default ui-corner-all">Toggle with Explode effect</a>  
+   </body>  
+</html>

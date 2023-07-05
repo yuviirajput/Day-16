@@ -1,0 +1,32 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI Buttons functionality</title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <script>  
+         $(function() {  
+            $( "#btn-1, #btn-2, #btn-3, #btn-4" ).button();  
+            $( "#btn-5" ).buttonset();  
+         });  
+      </script>  
+   </head>  
+   <body> 
+      <a id="btn-1" href="">Anchor</a>   
+      <button id="btn-2">Button</button>  
+      <input id="btn-3" type="submit" value="Submit">  
+      <input type="checkbox"  id="btn-4" >  
+      <label for="btn-4">Toggle</label>  
+      <br><br>  
+      <div id="btn-5">  
+         <input type="checkbox" id="check1">  
+         <label for="check1">Left</label>  
+         <input type="checkbox" id="check2">  
+         <label for="check2">Middle</label>  
+         <input type="checkbox" id="check3">  
+         <label for="check3">Right</label>  
+      </div>  
+</body>  
+</html>

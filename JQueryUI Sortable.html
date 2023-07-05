@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<head>  
+   <title>jQuery UI Sortable - Example</title>  
+   <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+   <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+   <style>  
+      #sort-1 { list-style-type: none; margin: 0;   
+         padding: 0; width: 200px; }  
+      #sort-1 li { margin: 0 5px 5px 5px; padding: 0.4em;   
+         padding-left: 1.5em; font-size: 18px; height: 20px; }  
+      .default {  
+         background: rgb(20, 220, 47);  
+         border: 2px solid rgb(42, 165, 89);  
+         color: white;  
+      }  
+   </style>  
+   <script>  
+      $(function() {  
+         $( "#sort-1" ).sortable();  
+      });  
+   </script>  
+</head>  
+<body>  
+<h1>List to re-order</h1>  
+   <ul id="sort-1">  
+      <li class="default">First</li>  
+      <li class="default">Second</li>  
+      <li class="default">Third</li>  
+      <li class="default">Fourth</li>  
+      <li class="default">Fifth</li>  
+      <li class="default">Sixth</li>  
+      <li class="default">Seventh</li>  
+   </ul>  
+</body>  
+</html>

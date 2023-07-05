@@ -1,0 +1,40 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI selectable-1</title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <style>  
+         #select-1 .ui-selecting { background: yellow ; }  
+         #select-1 .ui-selected { background: crimson; color: black; }  
+         #select-1 { list-style-type: none; margin: 0;   
+            padding: 0; width:200px; }  
+         #select-1 li { margin: 5px; padding: 0.4em;   
+            font-size: 18px; height: 20px; }  
+         .ui-widget-content {  
+            background: gray;  
+            border: 2px solid turquoise;  
+            color: white;  
+         }  
+      </style>  
+      <script>  
+         $(function() {  
+            $( "#select-1" ).selectable();  
+         });  
+      </script>  
+   </head>  
+   <body>  
+      <ol id="select-1">  
+         <li class="ui-widget-content">First</li>  
+         <li class="ui-widget-content">Second</li>  
+         <li class="ui-widget-content">Third</li>  
+         <li class="ui-widget-content">Fourth</li>  
+         <li class="ui-widget-content">Fifth</li>  
+         <li class="ui-widget-content">Sixth</li>  
+         <li class="ui-widget-content">Seventh</li> 
+         <li class="ui-widget-content">Eighth</li> 
+      </ol>   
+   </body>  
+</html>

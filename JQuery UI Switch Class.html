@@ -1,0 +1,45 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI Switch Class Example</title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <!-- CSS -->  
+      <style>  
+         .Large  
+         {  
+            font-family: cursive;  
+            font-size: large;  
+            font-weight: bold;  
+            color: crimson;  
+         }  
+         .Normal 
+         {  
+            font-family: fantasy;  
+            font-size: small;  
+            color: brown;  
+         }  
+      </style>  
+      <script>  
+         $(function() {  
+            $('#btn').click(function(){  
+               $(".Normal").switchClass("Normal","Large",'fast');  
+               $(".Large").switchClass("Large","Normal",'fast');  
+               return false;  
+            });  
+         });  
+      </script>  
+   </head>  
+   <body>  
+      <div class="Normal">  
+        Message for you: 
+      </div>  
+      <div class="Normal">  
+Hello World!!
+      </div>  
+      <br />  
+      <input type="button" id="btn" value="Switch Class" />  
+   </body>  
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI show Example</title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <!-- CSS -->  
+      <style>  
+         .toglr { width: 300px; height: 150px; }  
+         #btn { padding: .5em 1em; text-decoration: none; }  
+         #effect-1 { width: 200px; height: 100px; padding: 0.4em; position: relative; }  
+         #effect-1 h3 { margin: 0; padding: 0.4em; text-align: center; }  
+      </style>  
+      <script>  
+         $(function() {  
+            // run the currently selected effect  
+            function runEffect() {  
+               // run the effect  
+               $( "#effect-1" ).show( "shake", {times:10, distance: 300}, 500, callback);  
+            };  
+            //callback function to bring a hidden box back  
+            function callback() {  
+               setTimeout(function() {  
+                  $( "#effect:visible" ).removeAttr( "style" ).fadeOut();  
+               }, 500 );  
+            };  
+            $( "#btn" ).click(function() {  
+               runEffect();  
+               return false;  
+            });  
+            $( "#effect-1" ).hide();  
+         });  
+      </script>  
+   </head>  
+   <body>  
+      <div class="toglr">  
+         <div id="effect-1" class="ui-widget-content ui-corner-all">  
+            <h3 class="ui-widget-header ui-corner-all">Hello World!!</h3>  
+            <p>  
+              Click the button to shake me......   
+            </p>  
+         </div>  
+      </div>  
+      <a href="#" id="btn" class="ui-state-default ui-corner-all">Show element with Shake effect</a>  
+   </body>  
+</html>

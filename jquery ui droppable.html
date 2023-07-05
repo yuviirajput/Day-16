@@ -1,0 +1,76 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI Droppable - Default functionality</title>   
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <style>  
+         #drag-1 {   
+           width: 90px; height: 90px; padding: 0.5em;   
+           margin: 0px 5px 10px 0; background-color: crimson; color: white; border: 2px solid black; text-align:center;       
+         }  
+          #drop-1,#drop-2, #drop-3,#drop-4 {   
+           width: 100px; height: 100px; padding: 0.5em; float: left; background-color: gray; color: white; border: 2px solid black; text-align:center; margin: 10px;   
+         }  
+ 
+      </style>  
+      <script>  
+         $(function() {  
+            $( "#drag-1" ).draggable();  
+            $( "#drop-1" ).droppable({  
+            drop: function( event, ui ) {  
+               $( this )  
+               .addClass( "ui-state-highlight" )  
+               .find( "p" )  
+               .html( "Dropped!!" );  
+            }  
+         });  
+         $( "#drop-2" ).droppable({  
+            disabled : "true",  
+            drop: function( event, ui ) {  
+                $( this )  
+               .addClass( "ui-state-highlight" )  
+               .find( "p" )  
+               .html( "Dropped!!" );  
+            }  
+         });  
+         $( "#drop-3" ).droppable({  
+            tolerance: 'touch',  
+            drop: function( event, ui ) {  
+            $( this )  
+               .addClass( "ui-state-highlight" )  
+               .find( "p" )  
+               .html( "Dropped!!" );  
+            }  
+         });  
+         $( "#drop-4" ).droppable({  
+            tolerance: 'fit',  
+            drop: function( event, ui ) {  
+             $( this )  
+            .addClass( "ui-state-highlight" )  
+            .find( "p" )  
+            .html( "Dropped!!" );  
+            }  
+        });  
+      });  
+   </script>  
+</head>  
+<body>  
+   <div id="drag-1" class="ui-widget-content">  
+      <p>Drag to the Target.</p>  
+   </div>  
+   <div id="drop-1" class="ui-widget-header">  
+      <p>Target</p>  
+   </div>  
+   <div id="drop-2" class="ui-widget-header">  
+      <p>Disabled</p>  
+   </div>  
+   <div id="drop-3" class="ui-widget-header">  
+      <p>Drop to touch the boundary.</p>  
+   </div>  
+   <div id="drop-4" class="ui-widget-header">  
+      <p>Drop within the box.</p>  
+   </div>  
+</body>  
+</html>
